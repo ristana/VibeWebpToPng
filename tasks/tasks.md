@@ -45,6 +45,7 @@ Priority: Low
 - [x] Basic GUI window
 - [x] File conversion logic
 - [ ] Basic drag-drop
+- [ ] Basic drag-drop multiple files
 
 ### Phase 2: Polish (In Progress)
 - [ ] Progress feedback
