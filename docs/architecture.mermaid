@@ -1,0 +1,36 @@
+graph TD
+    A[User Interface] --> B[Drop Zone]
+    B --> C[File Handler]
+    C --> D[Image Converter]
+    D --> E[File System]
+    
+    subgraph GUI Components
+        A
+        B
+    end
+    
+    subgraph Core Logic
+        C
+        D
+    end
+    
+    subgraph System Integration
+        E
+    end
+
+classDiagram
+    class AppWindow {
+        -CTkFrame main_frame
+        -CTkLabel drop_label
+        -CTkLabel status_label
+        +__init__()
+        -_handle_drop(event)
+        -_handle_drag_enter(event)
+        -_handle_drag_leave(event)
+    }
+    
+    class ImageConverter {
+        +webp_to_png(input_path: str) -> Tuple[bool, str]
+    }
+    
+    AppWindow --> ImageConverter : uses 

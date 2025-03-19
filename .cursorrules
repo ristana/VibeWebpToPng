@@ -1,0 +1,86 @@
+# Project Context and Architecture
+SYSTEM_CONTEXT: |
+  You are developing a simple desktop application for converting WebP images to PNG format.
+  
+  Core Features:
+  1. Single window with drag-drop zone
+  2. WebP to PNG conversion
+  3. Progress and status feedback
+  4. Standalone executable
+
+  Components:
+  - GUI: CustomTkinter window with drag-drop
+  - Converter: Pillow-based image processing
+  - File Handler: Basic file operations
+
+# Code Organization
+FILE_STRUCTURE: |
+  src/
+  ├── main.py          # Application entry point
+  ├── converter.py     # Image conversion logic
+  └── gui/
+      └── app_window.py  # GUI implementation
+
+# Code Guidelines
+PYTHON_GUIDELINES: |
+  - Keep it simple and focused
+  - Use type hints
+  - Handle errors gracefully
+  - Use threading for large files
+  - Follow PEP 8
+
+# Implementation Rules
+CORE_RULES: |
+  1. GUI:
+     - Single window interface
+     - Clear drag-drop zone
+     - Simple status messages
+     - Progress indication
+
+  2. Conversion:
+     - Validate input files
+     - Convert WebP to PNG
+     - Show clear feedback
+     - Handle errors gracefully
+
+  3. Threading:
+     - Convert in background
+     - Keep UI responsive
+     - Update progress
+     - Handle cancellation
+
+# Error Prevention
+VALIDATION_RULES: |
+  1. Input Validation:
+     - Check file exists
+     - Verify WebP format
+     - Check write permissions
+
+  2. Error Handling:
+     - Show clear messages
+     - Prevent UI freezing
+     - Handle conversion errors
+
+# Distribution
+PACKAGING: |
+  - Use PyInstaller
+  - Single executable
+  - Include dependencies
+  - Test thoroughly
+
+# Command Execution
+accept_commands = true
+auto_run_commands = true
+command_confirmation = false
+
+# Code Changes
+accept_code_changes = true
+auto_apply_changes = true
+code_review_required = false
+
+# Project Scope
+project_type = "desktop_application"
+primary_language = "python"
+framework = "customtkinter"
+main_dependencies = ["Pillow", "customtkinter"]
+target_platforms = ["windows", "linux", "macos"] 
